@@ -1,0 +1,26 @@
+{
+  "name": "postgres-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+
+    "database.hostname": "host.docker.internal",
+    "database.port": "5432",
+    "database.user": "minh_toan",
+    "database.password": "MinhToan@2026",
+    "database.dbname": "northwind",   
+
+    "database.server.name": "northwind", 
+
+    "plugin.name": "pgoutput",
+
+    "publication.name": "dbz_publication",
+    "slot.name": "debezium_slot",
+
+    "table.include.list": "public.categories,public.customers,public.employee_territories,public.employees,public.order_details,public.orders,public.products,public.region,public.shippers,public.suppliers,public.territories,public.us_states",
+
+    "snapshot.mode": "initial" ,
+
+    "database.history.kafka.bootstrap.servers": "kafka:9092",
+    "database.history.kafka.topic": "schema-changes.northwind"   
+  }
+}

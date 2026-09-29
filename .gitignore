@@ -1,0 +1,14 @@
+# Môi trường ảo (Virtual Environments)
+.venv/
+venv/
+logs/
+*.log
+
+*.pyc
+__pycache__/
+
+# Bỏ qua các file tạm của Excel
+~$*.xlsx
+~$*.xls
+~$*.xlsm
+~$*.csv

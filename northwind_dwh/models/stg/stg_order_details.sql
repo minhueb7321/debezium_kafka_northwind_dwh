@@ -1,0 +1,1 @@
+select order_id, product_id, unit_price, quantity, discount from public.order_details
